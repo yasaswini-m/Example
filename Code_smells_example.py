@@ -2,9 +2,11 @@
 def calculate_total_price(items):
     total = 0
     for item in items:
+        price=item.price
         if item.quantity > 0:
             if item.price > 100:
-                total += item.price * 0.9
+                price *= 0.9
             else:
-                total += item.price * 0.95
+                price *= 0.95
+        total += price
     return total
